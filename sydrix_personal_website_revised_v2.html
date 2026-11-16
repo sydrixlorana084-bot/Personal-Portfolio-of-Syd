@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#153d32">
+<meta name="description" content="The personal portfolio of Sydrix L. Loraña — broadcasting, leadership, creative work, and stories with purpose.">
+<meta property="og:title" content="Sydrix L. Loraña — Personal Portfolio">
+<meta property="og:description" content="A living portfolio of learning, leadership, and creative work.">
+<title>Sydrix L. Loraña — Personal Portfolio</title>
+<style>
+:root{
+ --forest:#153d32;--deep:#0d2b24;--leaf:#47765d;--sage:#a8bda5;--mint:#e7eee4;
+ --cream:#f7f5ed;--paper:#fffdf7;--ink:#1c3028;--muted:#68786e;--line:#dce4d8;
+ --gold:#c7ad73;--shadow:0 18px 55px rgba(20,49,38,.10);--radius:24px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+button,input,textarea{font:inherit}button{cursor:pointer}
+.fabric{
+ background-color:var(--forest);
+ background-image:
+  radial-gradient(ellipse at 25% 25%,rgba(196,216,181,.12) 0 2px,transparent 3px),
+  radial-gradient(ellipse at 75% 75%,rgba(196,216,181,.10) 0 2px,transparent 3px),
+  repeating-linear-gradient(45deg,transparent 0 9px,rgba(220,235,211,.055) 9px 10px),
+  repeating-linear-gradient(-45deg,transparent 0 9px,rgba(220,235,211,.045) 9px 10px);
+ background-size:22px 22px,22px 22px,20px 20px,20px 20px;
+}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(13,43,36,.96);backdrop-filter:blur(16px);color:white;border-bottom:1px solid rgba(255,255,255,.12)}
+.navwrap{max-width:1220px;margin:auto;padding:12px 24px;display:flex;align-items:center;gap:22px}
+.brand{font-family:Georgia,serif;font-size:20px;letter-spacing:.04em;white-space:nowrap;color:#f7f5ed;text-decoration:none}
+.brand small{display:block;font:9px/1.4 Inter, sans-serif;letter-spacing:.22em;color:#c8d8c8}
+nav{display:flex;gap:5px;align-items:center;flex:1;overflow:auto;scrollbar-width:none}
+nav a{color:#e5eee4;text-decoration:none;font-size:12px;white-space:nowrap;padding:9px 11px;border-radius:999px;transition:.2s}
+nav a:hover{background:rgba(255,255,255,.12);color:white}
+.nav-actions{display:flex;gap:8px}
+.btn{border:1px solid transparent;border-radius:999px;padding:10px 15px;font-weight:650;font-size:12px;transition:.2s}
+.btn-light{background:#f5f3e9;color:var(--forest)}.btn-outline{background:transparent;border-color:rgba(255,255,255,.35);color:white}
+.btn-green{background:var(--forest);color:white}.btn-soft{background:var(--mint);color:var(--forest)}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.hero{color:#fff;position:relative;overflow:hidden}
+.hero-inner{max-width:1220px;margin:auto;padding:95px 24px 86px;display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#d1dfce;font-weight:750}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(48px,7vw,88px);line-height:.99;letter-spacing:-.045em;margin:22px 0}
+h1 em{color:#b9cba9;font-weight:400}
+.hero-copy{max-width:570px;color:#e0e9de;font-size:16px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-card{position:relative;max-width:390px;margin:auto;width:100%;padding:13px;border:1px solid rgba(255,255,255,.24);border-radius:190px 190px 28px 28px;background:rgba(255,255,255,.07);box-shadow:0 30px 80px rgba(0,0,0,.18)}
+.portrait{height:440px;border-radius:180px 180px 18px 18px;background:linear-gradient(145deg,#789078,#314f40 58%,#19382e);display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;color:#f7f5ed;overflow:hidden;position:relative}
+.portrait img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.portrait .placeholder{position:relative;z-index:1}
+.portrait strong{display:block;font:32px Georgia,serif}
+.portrait span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.8}
+.hero-note{position:absolute;bottom:28px;left:-25px;background:var(--paper);color:var(--forest);padding:14px 18px;border-radius:15px;box-shadow:var(--shadow);font:italic 16px Georgia,serif}
+main{max-width:1220px;margin:auto;padding:0 24px}
+.section{padding:88px 0;border-bottom:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:34px}
+.kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--leaf);font-weight:800}
+h2{font:400 clamp(34px,4vw,52px)/1.05 Georgia,serif;letter-spacing:-.03em;margin:10px 0 0;color:var(--forest)}
+.section-intro{max-width:440px;color:var(--muted);font-size:14px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:0 7px 24px rgba(25,55,40,.035);min-height:190px;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;right:-35px;top:-42px;width:120px;height:120px;border:1px solid #e1e9dc;border-radius:50%;box-shadow:0 0 0 13px #f8faf5,0 0 0 14px #e7eee4}
+.card-num{font-size:10px;letter-spacing:.16em;color:var(--leaf);font-weight:800}
+.card h3{font:26px Georgia,serif;color:var(--forest);margin:17px 0 8px}
+.card p{font-size:13px;color:var(--muted);margin:0;max-width:290px}
+.card-link{display:inline-flex;margin-top:20px;color:var(--leaf);font-size:12px;font-weight:750;text-decoration:none}
+.about-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:35px}
+.quote-panel{padding:35px;border-radius:var(--radius);color:white;min-height:270px;display:flex;flex-direction:column;justify-content:space-between}
+.quote-panel blockquote{font:italic 29px/1.25 Georgia,serif;margin:0}
+.quote-panel small{letter-spacing:.18em;text-transform:uppercase;color:#d5e1d2;font-size:9px}
+.prose{background:var(--paper);border:1px solid var(--line);padding:32px;border-radius:var(--radius)}
+.prose p{color:#52645a;margin-top:0}
+.editable{outline:0;border-radius:5px;transition:background .2s}
+body.editing .editable{background:#fff4cf;box-shadow:0 0 0 2px #d9bd73}
+body.editing .editable:focus{background:#fff9e9;box-shadow:0 0 0 2px #a98942}
+.timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.timeline-item{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;grid-template-columns:70px 1fr;gap:15px}
+.timeline-year{font:24px Georgia,serif;color:var(--leaf)}
+.timeline-item h3{margin:0 0 5px;font:21px Georgia,serif;color:var(--forest)}
+.timeline-item p{margin:0;color:var(--muted);font-size:13px}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.work{border-radius:20px;overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.work-image{height:190px;background:linear-gradient(135deg,#cbd8c4,#78927b);display:flex;align-items:center;justify-content:center;color:#fff;font:22px Georgia,serif;position:relative}
+.work-image img{position:absolute;width:100%;height:100%;object-fit:cover}
+.work-body{padding:20px}
+.work-body h3{font:23px Georgia,serif;color:var(--forest);margin:0 0 7px}
+.work-body p{font-size:13px;color:var(--muted);margin:0}
+.tag{display:inline-block;margin-top:13px;padding:5px 9px;border-radius:99px;background:var(--mint);color:var(--leaf);font-size:10px;font-weight:750}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{border:1px solid #cbd9c9;background:#f0f4ec;border-radius:99px;padding:10px 15px;color:var(--forest);font-size:12px}
+.contact-panel{border-radius:28px;padding:48px;color:white;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.contact-panel h2{color:white;max-width:550px}
+.contact-panel p{color:#d7e4d5;max-width:500px;font-size:14px}
+footer{padding:28px 24px;text-align:center;color:#748176;font-size:11px}
+.editor{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;gap:8px;align-items:center}
+.editor .btn{box-shadow:0 8px 28px rgba(0,0,0,.16)}
+.edit-hint{display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:22px;background:#263f32;color:white;padding:10px 16px;border-radius:99px;font-size:11px;z-index:45;box-shadow:var(--shadow);max-width:85vw;text-align:center}
+body.editing .edit-hint{display:block}
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(8,25,19,.58);z-index:80;align-items:center;justify-content:center;padding:18px}
+.modal-backdrop.open{display:flex}
+.modal{width:min(520px,100%);background:var(--paper);border-radius:22px;padding:26px;box-shadow:0 25px 90px #071a1380}
+.modal h3{font:28px Georgia,serif;color:var(--forest);margin:0 0 8px}
+.modal p{font-size:13px;color:var(--muted)}
+.modal-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+input[type=file]{max-width:100%;font-size:12px}
+.small-note{font-size:11px;color:var(--muted)}
+@media(max-width:850px){.navwrap{flex-wrap:wrap;gap:10px}.brand{flex:1}nav{order:3;flex-basis:100%}.nav-actions{margin-left:auto}.hero-inner{grid-template-columns:1fr;gap:40px;padding-top:65px}.hero-card{max-width:310px}.portrait{height:350px}.hero-note{left:-12px}.grid,.work-grid{grid-template-columns:repeat(2,1fr)}.about-layout{grid-template-columns:1fr}.contact-panel{display:block}}
+@media(max-width:560px){.navwrap{padding:10px 15px}.nav-actions .btn{padding:8px 10px}.hero-inner{padding:58px 20px}.hero-copy{font-size:14px}.section{padding:62px 0}main{padding:0 18px}.section-head{display:block}.section-intro{margin-top:15px}.grid,.work-grid,.timeline{grid-template-columns:1fr}.card{min-height:160px}.timeline-item{grid-template-columns:58px 1fr}.contact-panel{padding:30px}.editor{right:10px;bottom:10px}.editor .btn{font-size:11px;padding:9px 12px}}
+
+.photo-slot{display:flex;align-items:center;gap:12px;margin-top:13px;padding:9px;border:1px dashed #c8d7c7;border-radius:14px;background:#f7faf4;max-width:100%}
+.photo-slot .thumb{width:74px;height:62px;flex:0 0 74px;border-radius:9px;background:#e4ece0;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#718575;font-size:9px;text-align:center}
+.photo-slot .thumb img{width:100%;height:100%;object-fit:cover}
+.photo-slot .photo-copy{min-width:0;flex:1}
+.photo-slot .photo-copy strong{display:block;font-size:11px;color:var(--forest)}
+.photo-slot .photo-copy span{display:block;font-size:10px;color:var(--muted)}
+.photo-slot button{border:0;border-radius:99px;background:#e7eee4;color:var(--forest);font-size:10px;font-weight:750;padding:7px 10px;white-space:nowrap}
+.entry-meta{font-size:11px;color:var(--leaf);font-weight:750;letter-spacing:.04em;margin:4px 0 8px}
+.recognition-group{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:23px}
+.recognition-group h3{font:24px Georgia,serif;color:var(--forest);margin:0 0 13px}
+.recognition-group ul{margin:0;padding-left:19px;color:#53645a;font-size:13px}
+.recognition-group li{padding:4px 0}
+@media(max-width:560px){.photo-slot{gap:8px}.photo-slot .thumb{width:62px;height:54px;flex-basis:62px}.photo-slot button{padding:7px 8px}}
+
+
+/* Motion + interaction layer */
+:root{--lime:#d4e6b8;--glow:rgba(181,211,154,.28)}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+#scrollProgress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#b9cba9,#e7d7a6);z-index:100;box-shadow:0 0 12px var(--glow)}
+.hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(226,239,215,.13);border-radius:50%;right:-180px;top:-190px;box-shadow:0 0 0 35px rgba(226,239,215,.025),0 0 0 75px rgba(226,239,215,.02);pointer-events:none;animation:orbit 24s linear infinite}
+.hero-inner{position:relative;z-index:1}
+.eyebrow:before{content:"✳";display:inline-block;margin-right:9px;color:#d4e6b8;animation:spin 12s linear infinite}
+h1 em{background:linear-gradient(90deg,#b9cba9,#f0e5bd,#b9cba9);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 7s linear infinite}
+.hero-card{animation:float 6s ease-in-out infinite}
+.hero-note{animation:noteFloat 5s ease-in-out infinite}
+.card,.work,.timeline-item,.recognition-group,.prose,.quote-panel{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.card:hover,.work:hover,.timeline-item:hover,.recognition-group:hover{transform:translateY(-7px);box-shadow:0 20px 45px rgba(20,49,38,.12);border-color:#b9cbaa}
+.btn{position:relative;overflow:hidden}
+.btn:after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transition:transform .55s}
+.btn:hover:after{transform:translateX(120%)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+.social-dock{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:35;display:flex;flex-direction:column;gap:9px}
+.social-dock a,.social-links a{display:grid;place-items:center;text-decoration:none}
+.social-dock a{width:43px;height:43px;border-radius:50%;background:#fdfcf6;color:var(--forest);border:1px solid rgba(21,61,50,.15);box-shadow:0 8px 25px rgba(13,43,36,.14);transition:.25s}
+.social-dock a:hover{transform:translateX(-5px) scale(1.08);background:var(--forest);color:white}
+.social-dock svg,.social-links svg{width:19px;height:19px;fill:currentColor}
+.social-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.social-links a{display:flex;align-items:center;gap:9px;padding:11px 15px;border:1px solid rgba(255,255,255,.28);border-radius:999px;color:#fff;text-decoration:none;font-size:12px;font-weight:700;transition:.25s}
+.social-links a:hover{background:rgba(255,255,255,.14);transform:translateY(-3px)}
+.mail-link{color:#fff;text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.65);font-weight:700}
+.mail-link:hover{color:#d4e6b8}
+.fun-strip{overflow:hidden;background:#e9efe4;border-top:1px solid #dce4d8;border-bottom:1px solid #dce4d8;color:var(--forest);padding:12px 0}
+.fun-strip-track{display:flex;gap:32px;width:max-content;white-space:nowrap;animation:marquee 28s linear infinite;font-size:11px;letter-spacing:.18em;font-weight:800}
+.fun-strip-track span:after{content:"✳";margin-left:32px;color:#9aaE91}
+#backTop{position:fixed;left:18px;bottom:18px;z-index:34;width:43px;height:43px;border:0;border-radius:50%;background:var(--forest);color:white;box-shadow:0 8px 25px rgba(13,43,36,.2);opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s}
+#backTop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.contact-panel{position:relative;overflow:hidden}
+.contact-panel:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(255,255,255,.15);border-radius:50%;right:-80px;bottom:-150px;box-shadow:0 0 0 24px rgba(255,255,255,.035),0 0 0 50px rgba(255,255,255,.025);pointer-events:none}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes noteFloat{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(1deg) translateY(-7px)}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes shimmer{to{background-position:200% center}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media(max-width:850px){.social-dock{top:auto;bottom:75px;right:10px;transform:none;flex-direction:row}.social-dock a{width:38px;height:38px;background:rgba(253,252,246,.95)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+
+/* Interactive Plus features */
+:root{color-scheme:light}
+body.dark-mode{--cream:#101b17;--paper:#182720;--ink:#e8eee8;--muted:#b1c0b5;--line:#304238;--mint:#263b30;--forest:#b9cba9;--leaf:#a8c39d;background:var(--cream);color:var(--ink)}
+body.dark-mode h2,body.dark-mode .card h3,body.dark-mode .timeline-item h3{color:#d9e7d2}
+body.dark-mode .card,body.dark-mode .timeline-item,body.dark-mode .prose{background:#182720;border-color:#304238}
+body.dark-mode .prose p,body.dark-mode .card p,body.dark-mode .timeline-item p{color:#b1c0b5}
+.feature-tools{display:flex;gap:8px;align-items:center}
+.feature-btn{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:9px 12px;font-size:12px;font-weight:700}
+.feature-btn:hover{background:rgba(255,255,255,.2)}
+.feature-panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;margin:0 0 25px}
+.feature-panel h3{font:25px Georgia,serif;color:var(--forest);margin:0 0 8px}
+.feature-panel p{color:var(--muted);font-size:13px;margin:0 0 14px}
+.project-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.filter-chip{border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);padding:8px 13px;font-size:12px}
+.filter-chip.active{background:var(--forest);color:#fff;border-color:var(--forest)}
+#portfolioSearch,.contact-form input,.contact-form textarea{width:100%;border:1px solid var(--line);background:var(--cream);color:var(--ink);border-radius:12px;padding:12px 14px;outline:none}
+#portfolioSearch:focus,.contact-form input:focus,.contact-form textarea:focus{border-color:var(--leaf);box-shadow:0 0 0 3px rgba(71,118,93,.12)}
+.contact-form{display:grid;gap:10px;margin-top:18px;max-width:560px}
+.contact-form textarea{min-height:110px;resize:vertical}
+.feature-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.feature-action{border:0;border-radius:999px;background:var(--forest);color:white;padding:11px 16px;font-weight:700;font-size:12px}
+.feature-action.secondary{background:var(--mint);color:var(--ink)}
+#commandPalette{position:fixed;inset:0;z-index:100;background:rgba(5,15,10,.68);display:none;align-items:flex-start;justify-content:center;padding:14vh 18px 20px}
+#commandPalette.open{display:flex}
+.command-box{width:min(540px,100%);background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 25px 80px rgba(0,0,0,.3)}
+.command-box input{width:100%;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--cream);color:var(--ink)}
+.command-list{display:grid;gap:7px;margin-top:12px}
+.command-list button{text-align:left;border:0;background:transparent;color:var(--ink);padding:11px 12px;border-radius:10px}
+.command-list button:hover{background:var(--mint)}
+#toastNotice{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:120;background:#142f25;color:#fff;padding:11px 17px;border-radius:999px;font-size:12px;box-shadow:0 8px 30px #0003;transition:.25s}
+#toastNotice.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:700px){.feature-tools{gap:5px}.feature-btn{padding:8px 9px;font-size:11px}.feature-panel{padding:17px}}
+@media(prefers-reduced-motion:reduce){.feature-btn,#toastNotice{transition:none}}
+
+
+/* Immersive journey + image exploration */
+.section-head{align-items:center}
+.section-cta{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:10px 15px;border:1px solid var(--leaf);border-radius:99px;background:transparent;color:var(--forest);font-size:11px;font-weight:800;letter-spacing:.04em;text-decoration:none;transition:.25s}
+.section-cta:hover{background:var(--forest);color:white;transform:translateY(-2px)}
+.timeline-item{cursor:pointer;position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s}
+.timeline-item:after{content:"OPEN CHAPTER ↗";position:absolute;right:18px;bottom:14px;font-size:9px;letter-spacing:.12em;color:var(--leaf);font-weight:800;opacity:.8}
+.timeline-item:focus-visible,.photo-slot:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.timeline-item:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.photo-slot{cursor:zoom-in}
+.photo-slot .thumb{transition:transform .35s}
+.photo-slot:hover .thumb{transform:scale(1.04)}
+.photo-slot .thumb img{cursor:zoom-in}
+.journey-overlay{position:fixed;inset:0;z-index:110;background:rgba(5,20,14,.82);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:clamp(12px,3vw,34px);overflow:auto}
+.journey-overlay.open{display:flex;animation:overlayIn .25s ease}
+.journey-dialog{width:min(900px,100%);max-height:92vh;overflow:auto;background:var(--paper);color:var(--ink);border-radius:26px;box-shadow:0 35px 100px #0007;position:relative}
+.journey-dialog-inner{padding:clamp(18px,4vw,38px)}
+.journey-dialog h3{font:clamp(27px,4vw,42px)/1.1 Georgia,serif;color:var(--forest);margin:8px 0}
+.journey-dialog p{color:var(--muted);font-size:14px}
+.journey-dialog .journey-hero-image{width:100%;max-height:54vh;object-fit:cover;border-radius:18px;background:var(--mint);display:block}
+.journey-close{position:sticky;top:12px;float:right;margin:12px 12px -50px 0;z-index:2;border:0;border-radius:50%;width:40px;height:40px;background:var(--forest);color:white;font-size:21px}
+.journey-detail{margin-top:20px;padding:18px;border-radius:16px;background:var(--mint)}
+.journey-detail .photo-slot{display:none}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.gallery-tile{border:0;padding:0;background:var(--mint);border-radius:16px;overflow:hidden;cursor:zoom-in;min-height:130px;position:relative}
+.gallery-tile img{width:100%;height:100%;min-height:130px;max-height:230px;object-fit:cover;display:block;transition:transform .5s}
+.gallery-tile:hover img{transform:scale(1.07)}
+.gallery-tile span{position:absolute;left:8px;bottom:8px;padding:5px 9px;border-radius:99px;background:#10291dcc;color:white;font-size:10px}
+@keyframes overlayIn{from{opacity:0}to{opacity:1}}
+@media(max-width:700px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.section-cta{margin-top:12px}.timeline-item{padding-bottom:42px}}
+@media(prefers-reduced-motion:reduce){.journey-overlay.open{animation:none}}
+
+
+/* Final polish: framed surfaces, tactile navigation, and readable interaction states */
+:root{--frame:#c8d8bf;--frame-soft:rgba(200,216,191,.42)}
+.card,.work,.timeline-item,.recognition-group,.prose,.quote-panel,.contact-panel{
+ outline:1px solid transparent;outline-offset:4px;
+}
+.card:after,.work:after,.recognition-group:after{
+ content:"";position:absolute;inset:9px;border:1px solid var(--frame-soft);
+ border-radius:calc(var(--radius) - 7px);pointer-events:none;opacity:.65;transition:.3s;
+}
+.work{position:relative}
+.card:hover:after,.work:hover:after,.recognition-group:hover:after{inset:6px;border-color:var(--frame);opacity:1}
+.card,.work,.recognition-group,.prose,.quote-panel{cursor:pointer}
+.card:focus-visible,.work:focus-visible,.recognition-group:focus-visible,.prose:focus-visible,.quote-panel:focus-visible{
+ outline:3px solid var(--gold);outline-offset:4px
+}
+.section{position:relative}
+.section:not(#contact):before{content:"";position:absolute;top:25px;left:0;width:42px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);opacity:.8}
+.section-head h2{position:relative;display:inline-block}
+.section-head h2:after{content:"";display:block;width:54px;height:1px;background:var(--gold);margin-top:13px}
+.hero-card:before{content:"";position:absolute;inset:-8px;border:1px solid rgba(220,235,211,.35);border-radius:200px 200px 36px 36px;pointer-events:none}
+.photo-slot{border-color:#b8cbb5;box-shadow:inset 0 0 0 3px rgba(255,255,255,.5)}
+.feature-btn:focus-visible,.feature-action:focus-visible,.btn:focus-visible,.section-cta:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.detail-overlay{position:fixed;inset:0;z-index:130;background:rgba(5,20,14,.82);backdrop-filter:blur(13px);display:none;align-items:center;justify-content:center;padding:18px}
+.detail-overlay.open{display:flex}
+.detail-card{width:min(760px,100%);max-height:88vh;overflow:auto;background:var(--paper);color:var(--ink);border:1px solid var(--frame);border-radius:26px;padding:clamp(22px,4vw,40px);box-shadow:0 35px 100px #0008;position:relative}
+.detail-card:before{content:"";position:absolute;inset:9px;border:1px solid var(--frame-soft);border-radius:19px;pointer-events:none}
+.detail-card>*{position:relative}
+.detail-card h3{font:clamp(28px,4vw,42px)/1.1 Georgia,serif;color:var(--forest);margin:8px 42px 12px 0}
+.detail-card p{color:var(--muted);font-size:14px;line-height:1.8}
+.detail-card img{display:block;width:100%;max-height:360px;object-fit:cover;border-radius:16px;margin:0 0 20px}
+.detail-close{position:absolute;right:20px;top:18px;border:0;border-radius:50%;width:40px;height:40px;background:var(--forest);color:white;font-size:22px;z-index:2}
+.detail-meta{font-size:10px;letter-spacing:.18em;font-weight:800;color:var(--leaf);text-transform:uppercase}
+.utility-dock{position:fixed;left:18px;bottom:74px;z-index:36;display:flex;gap:8px;flex-direction:column}
+.utility-dock button{border:1px solid var(--line);border-radius:999px;padding:10px 13px;background:var(--paper);color:var(--forest);font-size:11px;font-weight:800;box-shadow:0 8px 25px rgba(13,43,36,.13)}
+.utility-dock button:hover{transform:translateY(-2px);background:var(--mint)}
+body.reading-mode .topbar,body.reading-mode .social-dock,body.reading-mode .editor,body.reading-mode .utility-dock{opacity:.12;transition:opacity .25s}
+body.reading-mode .topbar:hover,body.reading-mode .editor:hover,body.reading-mode .utility-dock:hover{opacity:1}
+body.reading-mode .section{max-width:900px;margin-inline:auto}
+body.dark-mode .detail-card{background:#182720;border-color:#526c58}
+@media(max-width:700px){.utility-dock{left:9px;bottom:122px}.utility-dock button{padding:9px 11px}.detail-card{border-radius:20px}.card:after,.work:after,.recognition-group:after{inset:6px}}
+@media(prefers-reduced-motion:reduce){.card:after,.work:after,.utility-dock button{transition:none}}
+
+</style>
+</head>
+<body>
+<div id="scrollProgress" aria-hidden="true"></div>
+<header class="topbar">
+ <div class="navwrap">
+  <a class="brand" href="#home">SL<span style="color:#b9cba9">.</span><small>PERSONAL PORTFOLIO</small></a>
+  <nav aria-label="Main navigation">
+   <a href="#about">About</a><a href="#journey">Journey</a><a href="#leadership">Leadership</a><a href="#works">Works</a><a href="#projects">Projects</a><a href="#recognition">Recognition</a><a href="#vision">Vision</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-actions feature-tools"><button class="feature-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">◐ Theme</button><button class="feature-btn" id="commandOpen" type="button" aria-label="Open quick navigation">⌘ Quick</button><a class="btn btn-outline" href="https://www.instagram.com/drixxtr/" target="_blank" rel="noopener" aria-label="Open Instagram">IG ↗</a><a class="btn btn-outline" href="https://www.facebook.com/sydrix.lorana" target="_blank" rel="noopener" aria-label="Open Facebook">FB ↗</a><button class="btn btn-outline" onclick="window.print()">Print</button></div>
+ </div>
+</header>
+<section class="hero fabric" id="home">
+ <div class="hero-inner">
+  <div>
+   <div class="eyebrow editable" data-key="hero-eyebrow">A PERSONAL ARCHIVE · A WORK IN PROGRESS</div>
+   <h1 class="editable" data-key="hero-title">A story of<br><em>purpose & expression.</em></h1>
+   <p class="hero-copy editable" data-key="hero-copy">I’m Sydrix L. Loraña — a Broadcasting student, student leader, and creative communicator. This is a growing collection of the people, projects, ideas, and experiences shaping my journey.</p>
+   <div class="hero-buttons"><a class="btn btn-light" href="#about">Explore my story ↗</a><a class="btn btn-outline" href="#works">View selected works</a></div>
+  </div>
+  <div class="hero-card">
+   <div class="portrait" id="portrait">
+    <div class="placeholder"><strong class="editable" data-key="portrait-name">Your portrait</strong><span>Upload a photo in Edit mode</span></div>
+   </div>
+   <div class="hero-note editable" data-key="hero-note">“Ad astra per aspera.”</div>
+  </div>
+ </div>
+</section>
+<div class="fun-strip" aria-label="Portfolio highlights"><div class="fun-strip-track"><span>STORIES WORTH TELLING</span><span>LEADERSHIP IN ACTION</span><span>CREATIVITY WITH PURPOSE</span><span>ALWAYS BECOMING</span><span>STORIES WORTH TELLING</span><span>LEADERSHIP IN ACTION</span><span>CREATIVITY WITH PURPOSE</span><span>ALWAYS BECOMING</span></div></div>
+<main>
+<section class="section" id="about">
+ <div class="section-head"><div><div class="kicker">01 / The introduction</div><h2>Beyond the introduction.</h2></div><p class="section-intro editable" data-key="about-intro">A little about the person behind the roles, projects, and pages.</p></div>
+ <div class="about-layout">
+  <div class="quote-panel fabric"><small>PERSONAL PHILOSOPHY</small><blockquote class="editable" data-key="philosophy">“Let purpose guide the work, and let the work speak for itself.”</blockquote><small class="editable" data-key="philosophy-credit">A principle I carry forward</small></div>
+  <div class="prose"><h3 style="font:26px Georgia,serif;color:var(--forest);margin-top:0">The person behind the portfolio</h3><p class="editable" data-key="about-body">I am currently pursuing a degree in Broadcasting at West Visayas State University. I value meaningful communication, collaborative leadership, and work that creates a positive contribution. My experiences across student organizations, academic activities, and creative productions continue to shape how I listen, lead, learn, and create.</p><p class="editable" data-key="about-extra">This space is intentionally evolving. It will grow as I discover new interests, take on new responsibilities, and find better ways to tell stories.</p></div>
+ </div>
+</section>
+<section class="section" id="journey">
+ <div class="section-head"><div><div class="kicker">02 / The journey</div><h2>Where the journey began.</h2></div><p class="section-intro editable" data-key="journey-intro">Four chapters of learning, growth, and discovery. Add the exact years, locations, descriptions, and a photograph for each school.</p></div>
+ <div class="timeline" id="timeline">
+  <article class="timeline-item" style="grid-template-columns:1fr">
+   <div><div class="entry-meta editable" data-key="elem-years">YEAR / ELEMENTARY</div><h3 class="editable" data-key="elem-school">Calinog Elementary School</h3><p class="editable" data-key="elem-location">Location: Calinog, Iloilo</p><p class="editable" data-key="elem-description">The first chapter of my educational journey, where I began building the foundations of learning, curiosity, and friendship.</p><div class="photo-slot"><div class="thumb" id="thumb-elem">School photo</div><div class="photo-copy"><strong>Elementary memory</strong><span>Add a school photo or memorable moment</span></div><button onclick="pickPhoto('elem')">＋ Add photo</button><input id="photo-elem" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-elem')"></div></div>
+  </article>
+  <article class="timeline-item" style="grid-template-columns:1fr">
+   <div><div class="entry-meta editable" data-key="jhs-years">YEAR / JUNIOR HIGH SCHOOL</div><h3 class="editable" data-key="jhs-school">Lambunao National High School — STE</h3><p class="editable" data-key="jhs-location">Location: Lambunao, Iloilo</p><p class="editable" data-key="jhs-description">A formative stage of academic development through the Science, Technology, and Engineering (STE) program, alongside experiences that shaped discipline and collaboration.</p><div class="photo-slot"><div class="thumb" id="thumb-jhs">School photo</div><div class="photo-copy"><strong>Junior high school memory</strong><span>Add a school photo or memorable moment</span></div><button onclick="pickPhoto('jhs')">＋ Add photo</button><input id="photo-jhs" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-jhs')"></div></div>
+  </article>
+  <article class="timeline-item" style="grid-template-columns:1fr">
+   <div><div class="entry-meta editable" data-key="shs-years">YEAR / SENIOR HIGH SCHOOL</div><h3 class="editable" data-key="shs-school">Lambunao National High School — STEM</h3><p class="editable" data-key="shs-location">Location: Lambunao, Iloilo</p><p class="editable" data-key="shs-description">Senior high school under the Science, Technology, Engineering, and Mathematics (STEM) strand — a chapter of deeper learning, service, and leadership.</p><div class="photo-slot"><div class="thumb" id="thumb-shs">School photo</div><div class="photo-copy"><strong>Senior high school memory</strong><span>Add a school photo or memorable moment</span></div><button onclick="pickPhoto('shs')">＋ Add photo</button><input id="photo-shs" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-shs')"></div></div>
+  </article>
+  <article class="timeline-item" style="grid-template-columns:1fr">
+   <div><div class="entry-meta editable" data-key="college-years">2026 — PRESENT / COLLEGE</div><h3 class="editable" data-key="college-school">West Visayas State University — College of Communication</h3><p class="editable" data-key="college-program">Bachelor of Arts in Broadcasting (BAB)</p><p class="editable" data-key="college-location">Location: La Paz, Iloilo City</p><p class="editable" data-key="college-description">The current chapter: learning the craft of broadcasting, exploring communication, and growing through creative work and student leadership.</p><div class="photo-slot"><div class="thumb" id="thumb-college">Campus photo</div><div class="photo-copy"><strong>College memory</strong><span>Add a campus, class, or university photo</span></div><button onclick="pickPhoto('college')">＋ Add photo</button><input id="photo-college" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-college')"></div></div>
+  </article>
+ </div>
+</section>
+<section class="section" id="leadership">
+ <div class="section-head"><div><div class="kicker">03 / The leadership</div><h2>Leadership in practice.</h2></div><p class="section-intro editable" data-key="leadership-intro">A record of the roles entrusted to me, the communities I serve, and the work behind each position. Each entry has its own photo space.</p></div>
+ <div class="grid" id="leadership-cards">
+  <article class="card"><div class="card-num">01 — UNIVERSITY</div><h3 class="editable" data-key="lead1-title">Vice Chairperson</h3><p class="editable" data-key="lead1-text">West Visayas State University First Year Curriculum Council.</p><div class="photo-slot"><div class="thumb" id="thumb-lead1">Photo</div><div class="photo-copy"><strong>In this position</strong><span>Add a related photo</span></div><button onclick="pickPhoto('lead1')">＋ Photo</button><input id="photo-lead1" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-lead1')"></div></article>
+  <article class="card"><div class="card-num">02 — UNIVERSITY</div><h3 class="editable" data-key="lead2-title">Vice Chairperson</h3><p class="editable" data-key="lead2-text">West Visayas State University National Service Training Program (NSTP).</p><div class="photo-slot"><div class="thumb" id="thumb-lead2">Photo</div><div class="photo-copy"><strong>In this position</strong><span>Add a related photo</span></div><button onclick="pickPhoto('lead2')">＋ Photo</button><input id="photo-lead2" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-lead2')"></div></article>
+  <article class="card"><div class="card-num">03 — COLLEGE</div><h3 class="editable" data-key="lead3-title">Chairperson</h3><p class="editable" data-key="lead3-text">College of Communication First Year Curriculum Council.</p><div class="photo-slot"><div class="thumb" id="thumb-lead3">Photo</div><div class="photo-copy"><strong>In this position</strong><span>Add a related photo</span></div><button onclick="pickPhoto('lead3')">＋ Photo</button><input id="photo-lead3" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-lead3')"></div></article>
+  <article class="card"><div class="card-num">04 — PROGRAM</div><h3 class="editable" data-key="lead4-title">Chairperson</h3><p class="editable" data-key="lead4-text">Bachelor of Arts in Broadcasting (BAB).</p><div class="photo-slot"><div class="thumb" id="thumb-lead4">Photo</div><div class="photo-copy"><strong>In this position</strong><span>Add a related photo</span></div><button onclick="pickPhoto('lead4')">＋ Photo</button><input id="photo-lead4" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-lead4')"></div></article>
+  <article class="card"><div class="card-num">05 — ORGANIZATION</div><h3 class="editable" data-key="lead5-title">Member</h3><p class="editable" data-key="lead5-text">Lakas Youth Organization.</p><div class="photo-slot"><div class="thumb" id="thumb-lead5">Photo</div><div class="photo-copy"><strong>In this position</strong><span>Add a related photo</span></div><button onclick="pickPhoto('lead5')">＋ Photo</button><input id="photo-lead5" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-lead5')"></div></article>
+ </div>
+</section>
+<section class="section" id="works">
+ <div class="section-head"><div><div class="kicker">04 / College involvement</div><h2>Learning beyond the classroom.</h2></div><p class="section-intro editable" data-key="works-intro">A record of trainings, productions, university activities, visits, and competitions throughout my college journey. Each entry includes its role, date, location, description, and a discreet photo area.</p></div>
+ <div class="feature-panel" id="portfolioExplorer">
+ <h3>Find something in the portfolio</h3>
+ <p>Search projects, stories, and creative work by title or keyword.</p>
+ <input id="portfolioSearch" type="search" placeholder="Try “broadcasting”, “writing”, or “leadership”…" aria-label="Search portfolio items">
+ <div class="project-filters" id="projectFilters" aria-label="Filter portfolio categories">
+  <button class="filter-chip active" type="button" data-filter="all">Everything</button>
+  <button class="filter-chip" type="button" data-filter="broadcasting">Broadcasting</button>
+  <button class="filter-chip" type="button" data-filter="writing">Writing</button>
+  <button class="filter-chip" type="button" data-filter="leadership">Leadership</button>
+  <button class="filter-chip" type="button" data-filter="creative">Creative</button>
+ </div>
+ <p id="portfolioCount" aria-live="polite">Showing all portfolio entries.</p>
+</div>
+<div class="work-grid" id="work-grid">
+<article class="work">
+      <div class="work-body">
+       <span class="tag">Program Committee Head</span>
+       <h3 class="editable" data-key="involve1-title">NSTP-CWTS Training</h3>
+       <div class="entry-meta editable" data-key="involve1-date">November 14, 2026</div>
+       <p class="editable" data-key="involve1-desc">Training on Safety Awareness, Emergency Preparedness, and Personal Protection</p>
+       <p class="editable" data-key="involve1-loc" style="margin-top:7px">⌖ West Visayas State University — venue to confirm</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve1">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve1')">＋ Photo</button><input id="photo-involve1" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve1')"></div>
+      </div>
+     </article>
+<article class="work">
+      <div class="work-body">
+       <span class="tag">Director / Team Leader</span>
+       <h3 class="editable" data-key="involve2-title">Team Passi Production</h3>
+       <div class="entry-meta editable" data-key="involve2-date">November 2026</div>
+       <p class="editable" data-key="involve2-desc">A vlogging journey and my first production during my college journey.</p>
+       <p class="editable" data-key="involve2-loc" style="margin-top:7px">⌖ Passi, Iloilo — production locations</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve2">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve2')">＋ Photo</button><input id="photo-involve2" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve2')"></div>
+      </div>
+     </article>
+<article class="work">
+      <div class="work-body">
+       <span class="tag">Facilitator</span>
+       <h3 class="editable" data-key="involve3-title">LEAP 2026 — Leadership Excellence in Parliamentary Procedure</h3>
+       <div class="entry-meta editable" data-key="involve3-date">August 15, 2026</div>
+       <p class="editable" data-key="involve3-desc">A leadership and parliamentary procedure training for high school students.</p>
+       <p class="editable" data-key="involve3-loc" style="margin-top:7px">⌖ Dumangas National High School, Dumangas, Iloilo</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve3">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve3')">＋ Photo</button><input id="photo-involve3" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve3')"></div>
+      </div>
+     </article>
+<article class="work">
+      <div class="work-body">
+       <span class="tag">Participant</span>
+       <h3 class="editable" data-key="involve4-title">Economic and Financial Literacy (EFL) Session</h3>
+       <div class="entry-meta editable" data-key="involve4-date">November 11, 2026</div>
+       <p class="editable" data-key="involve4-desc">A financial literacy learning session. Add the official university/venue name when confirmed.</p>
+       <p class="editable" data-key="involve4-loc" style="margin-top:7px">⌖ University / venue: add confirmed name</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve4">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve4')">＋ Photo</button><input id="photo-involve4" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve4')"></div>
+      </div>
+     </article>
+<article class="work">
+      <div class="work-body">
+       <span class="tag">Head Organizer</span>
+       <h3 class="editable" data-key="involve5-title">First Year Curriculum General Assembly 2026</h3>
+       <div class="entry-meta editable" data-key="involve5-date">October 27, 2026</div>
+       <p class="editable" data-key="involve5-desc">A general assembly organized for the first-year students of the College of Communication.</p>
+       <p class="editable" data-key="involve5-loc" style="margin-top:7px">⌖ West Visayas State University — College of Communication</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve5">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve5')">＋ Photo</button><input id="photo-involve5" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve5')"></div>
+      </div>
+     </article>
+<article class="work">
+      <div class="work-body">
+       <span class="tag">Technical Working Group</span>
+       <h3 class="editable" data-key="involve6-title">ADOPT-AN-ESPLANADE 2026</h3>
+       <div class="entry-meta editable" data-key="involve6-date">October 23, 2026</div>
+       <p class="editable" data-key="involve6-desc">A university clean-up activity supporting a cleaner and more responsible campus environment.</p>
+       <p class="editable" data-key="involve6-loc" style="margin-top:7px">⌖ West Visayas State University, Iloilo City</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve6">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve6')">＋ Photo</button><input id="photo-involve6" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve6')"></div>
+      </div>
+     </article>
+<article class="work">
+      <div class="work-body">
+       <span class="tag">Participant</span>
+       <h3 class="editable" data-key="involve7-title">Pagpangamusta 2026</h3>
+       <div class="entry-meta editable" data-key="involve7-date">2026</div>
+       <p class="editable" data-key="involve7-desc">A Studiositas Honor Society program for first-year students of the College of Communication.</p>
+       <p class="editable" data-key="involve7-loc" style="margin-top:7px">⌖ West Visayas State University — College of Communication</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve7">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve7')">＋ Photo</button><input id="photo-involve7" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve7')"></div>
+      </div>
+     </article>
+<article class="work">
+      <div class="work-body">
+       <span class="tag">2nd Place — Talumpati</span>
+       <h3 class="editable" data-key="involve8-title">College of Communication Fun Days 2026</h3>
+       <div class="entry-meta editable" data-key="involve8-date">2026</div>
+       <p class="editable" data-key="involve8-desc">Second-place recognition in the Talumpati competition during COC Days 2026.</p>
+       <p class="editable" data-key="involve8-loc" style="margin-top:7px">⌖ West Visayas State University — College of Communication</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve8">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve8')">＋ Photo</button><input id="photo-involve8" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve8')"></div>
+      </div>
+     </article>
+<article class="work">
+      <div class="work-body">
+       <span class="tag">Educational Visit</span>
+       <h3 class="editable" data-key="involve9-title">Aksyon Radyo Iloilo</h3>
+       <div class="entry-meta editable" data-key="involve9-date">September 10, 2026</div>
+       <p class="editable" data-key="involve9-desc">An educational visit offering exposure to radio broadcasting and station operations.</p>
+       <p class="editable" data-key="involve9-loc" style="margin-top:7px">⌖ Aksyon Radyo Iloilo, Iloilo City</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve9">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve9')">＋ Photo</button><input id="photo-involve9" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve9')"></div>
+      </div>
+     </article>
+<article class="work">
+      <div class="work-body">
+       <span class="tag">Participant — Lakas Youth Organization</span>
+       <h3 class="editable" data-key="involve10-title">WESTIVAL 2026</h3>
+       <div class="entry-meta editable" data-key="involve10-date">August 10, 2026</div>
+       <p class="editable" data-key="involve10-desc">Participation in the organizational showcase as part of Lakas Youth Organization.</p>
+       <p class="editable" data-key="involve10-loc" style="margin-top:7px">⌖ Location: add event venue</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve10">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve10')">＋ Photo</button><input id="photo-involve10" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve10')"></div>
+      </div>
+     </article>
+<article class="work">
+      <div class="work-body">
+       <span class="tag">Participant</span>
+       <h3 class="editable" data-key="involve11-title">College of Communication Freshmen Orientation 2026</h3>
+       <div class="entry-meta editable" data-key="involve11-date">August 6, 2026</div>
+       <p class="editable" data-key="involve11-desc">Participation in the orientation welcoming first-year College of Communication students.</p>
+       <p class="editable" data-key="involve11-loc" style="margin-top:7px">⌖ West Visayas State University — College of Communication</p>
+       <div class="photo-slot"><div class="thumb" id="thumb-involve11">Photo</div><div class="photo-copy"><strong>Event documentation</strong><span>Add one related photo</span></div><button onclick="pickPhoto('involve11')">＋ Photo</button><input id="photo-involve11" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-involve11')"></div>
+      </div>
+     </article>
+ </div>
+</section>
+<section class="section" id="projects">
+ <div class="section-head"><div><div class="kicker">05 / Creative works</div><h2>Stories with a purpose.</h2></div><p class="section-intro editable" data-key="projects-intro">Selected creative work, writing, and communication outputs.</p></div>
+ <div class="work-grid" id="project-cards" style="grid-template-columns:minmax(0,760px)">
+  <article class="work">
+   <div class="work-body" style="padding:27px">
+    <span class="tag">NEWS ARTICLE · LAKAS YOUTH ORGANIZATION</span>
+    <h3 class="editable" data-key="project1-title" style="font-size:32px">Beyond the Clean Up</h3>
+    <p class="editable" data-key="project1-subtitle" style="font:italic 19px Georgia,serif;color:var(--leaf);margin:8px 0 18px">The Voice of Cleanliness Starts with LAKAS!</p>
+    <p class="editable" data-key="project1-text" style="font-size:14px;line-height:1.8">The LAKAS Youth Organization proudly presents its official entry to the Let’s Clean Up, PH! 2026 News Article Writing Contest, written by Sydrix Loraña.</p>
+    <p class="editable" data-key="project1-detail" style="font-size:14px;line-height:1.8">Through journalism, we document not only what was collected, but what the cleanup revealed about our communities, our waste, and our shared responsibility to build a more waste-conscious Philippines.</p>
+    <p class="editable" data-key="project1-credit" style="font-size:12px;font-weight:750;color:var(--forest);margin-top:18px">OFFICIAL ENTRY: SYDRIX LORAÑA · LAKAS YOUTH ORGANIZATION</p>
+    <div class="photo-slot" style="max-width:420px"><div class="thumb" id="thumb-project1">Article photo</div><div class="photo-copy"><strong>Creative work image</strong><span>Add the article, campaign, or cleanup photo</span></div><button onclick="pickPhoto('project1')">＋ Add photo</button><input id="photo-project1" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-project1')"></div>
+   </div>
+  </article>
+ </div>
+</section>
+<section class="section" id="recognition">
+ <div class="section-head"><div><div class="kicker">06 / Recognition</div><h2>Milestones & recognition.</h2></div><p class="section-intro editable" data-key="recognition-intro">A collection of academic distinctions and extracurricular recognitions from my college journey.</p></div>
+ <div style="display:grid;gap:16px">
+  <div class="recognition-group">
+   <div class="kicker">COLLEGE · 2026</div><h3>College of Communication</h3>
+   <ul><li><strong>2nd Place — Talumpati</strong>, College of Communication Fun Days / COC Days 2026</li></ul>
+   <div class="photo-slot" style="max-width:420px"><div class="thumb" id="thumb-award-college">Photo</div><div class="photo-copy"><strong>College recognition</strong><span>Add award or event photo</span></div><button onclick="pickPhoto('award-college')">＋ Photo</button><input id="photo-award-college" type="file" accept="image/*" hidden onchange="uploadEntryPhoto(event,'thumb-award-college')"></div>
+  </div>
+  
+  
+  
+  
+  </div>
+</section>
+
+<section class="section" id="vision">
+ <div class="section-head"><div><div class="kicker">07 / The future</div><h2>Still becoming.</h2></div><p class="section-intro editable" data-key="vision-intro">A personal compass for the direction you hope to take.</p></div>
+ <div class="grid">
+  <article class="card"><div class="card-num">THE MISSION</div><h3 class="editable" data-key="mission-title">Communicate with purpose</h3><p class="editable" data-key="mission-text">To create, connect, and contribute through thoughtful communication.</p></article>
+  <article class="card"><div class="card-num">THE AMBITION</div><h3 class="editable" data-key="ambition-title">Keep expanding</h3><p class="editable" data-key="ambition-text">To grow as a communicator, creative practitioner, and responsible leader.</p></article>
+  <article class="card"><div class="card-num">THE REMINDER</div><h3 class="editable" data-key="reminder-title">Stay grounded</h3><p class="editable" data-key="reminder-text">Let every opportunity become a chance to learn and every achievement remain a reason to be grateful.</p></article>
+ </div>
+ <div style="margin-top:28px"><div class="kicker" style="margin-bottom:13px">SKILLS & INTERESTS</div><div class="skills"><span class="skill editable" data-key="skill1">Broadcasting</span><span class="skill editable" data-key="skill2">Public Speaking</span><span class="skill editable" data-key="skill3">Student Leadership</span><span class="skill editable" data-key="skill4">Writing</span><span class="skill editable" data-key="skill5">Video Production</span><span class="skill editable" data-key="skill6">Creative Direction</span></div></div>
+</section>
+<section class="section" id="contact" style="border:0">
+ <div class="contact-panel fabric">
+  <div><div class="kicker" style="color:#c8d9c3">08 / The connection</div><h2 class="editable" data-key="contact-title">Good work begins with a conversation.</h2><p class="editable" data-key="contact-text">For collaborations, creative projects, or meaningful conversations, feel free to reach out through the channels below.</p><p>Email: <a class="mail-link" href="mailto:sydrix.lorana@wvsu.edu.ph">sydrix.lorana@wvsu.edu.ph ↗</a></p><div class="social-links"><a href="https://www.instagram.com/drixxtr/" target="_blank" rel="noopener" aria-label="Visit Sydrix on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>@drixxtr · Instagram ↗</a><a href="https://www.facebook.com/sydrix.lorana" target="_blank" rel="noopener" aria-label="Visit Sydrix on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.8h3l.45-3.4H13.5V7.6c0-1 .28-1.7 1.72-1.7h1.84V2.86A24 24 0 0 0 14.38 2c-2.66 0-4.48 1.62-4.48 4.6v3.2H6.9v3.4h3V22h3.6z"/></svg>Facebook · Sydrix L. Loraña ↗</a>
+</div>
+<form class="contact-form" id="contactForm">
+ <input id="contactName" name="name" placeholder="Your name" autocomplete="name" required>
+ <input id="contactSubject" name="subject" placeholder="What would you like to discuss?" required>
+ <textarea id="contactMessage" name="message" placeholder="Write a short message…" required></textarea>
+ <div class="feature-actions">
+  <button class="feature-action" type="submit">Prepare email ↗</button>
+  <button class="feature-action secondary" type="button" id="copyEmail">Copy email</button>
+  <button class="feature-action secondary" type="button" id="sharePortfolio">Share portfolio</button>
+  <button class="feature-action secondary" type="button" id="downloadVcard">Save contact</button>
+ </div>
+ <p style="font-size:11px;margin:0;color:var(--muted)">Your message opens in your own email app; this website does not collect or store it.</p>
+</form></div>
+  <a class="btn btn-light" href="#home">Back to top ↑</a>
+ </div>
+</section>
+</main>
+<footer><span class="editable" data-key="footer-text">© 2026 Sydrix L. Loraña · A living portfolio of learning, leadership, and creative work.</span><br><span style="opacity:.7">Designed with intention · Green textile-inspired identity</span></footer>
+<div class="social-dock" aria-label="Social media shortcuts"><a href="https://www.instagram.com/drixxtr/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a><a href="https://www.facebook.com/sydrix.lorana" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.8h3l.45-3.4H13.5V7.6c0-1 .28-1.7 1.72-1.7h1.84V2.86A24 24 0 0 0 14.38 2c-2.66 0-4.48 1.62-4.48 4.6v3.2H6.9v3.4h3V22h3.6z"/></svg></a><a href="mailto:sydrix.lorana@wvsu.edu.ph" title="Send email" aria-label="Send email">✉</a></div>
+<button id="backTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div class="editor"><button class="btn btn-light" id="editBtn" onclick="toggleEdit()">✎ Edit website</button><button class="btn btn-green" id="saveBtn" onclick="saveSite()" style="display:none">Save changes</button><button class="btn btn-outline" id="moreBtn" onclick="openTools()">⋯ Tools</button></div>
+<div class="edit-hint">EDIT MODE · Click any text to change it. Use Tools to add content or export your content.</div>
+<div class="modal-backdrop" id="toolsModal" onclick="if(event.target===this)closeTools()">
+ <div class="modal">
+  <h3>Website studio</h3><p>Your edits are saved in this browser on this device. Export a backup regularly so you can move your content to another device.</p>
+  <div class="modal-actions">
+   <button class="btn btn-green" onclick="document.getElementById('photoInput').click()">＋ Upload / change portrait</button>
+   <button class="btn btn-soft" onclick="document.getElementById('workInput').click()">＋ Add portfolio image</button>
+   <button class="btn btn-soft" onclick="addCard('work-grid','work')">＋ Add portfolio item</button>
+   <button class="btn btn-soft" onclick="addCard('project-cards','project')">＋ Add project</button>
+   <button class="btn btn-soft" onclick="addTimeline()">＋ Add timeline entry</button>
+   <button class="btn btn-soft" onclick="addCard('leadership-cards','leadership')">＋ Add leadership card</button>
+   <button class="btn btn-outline" onclick="exportData()">Export backup</button>
+   <button class="btn btn-outline" onclick="document.getElementById('importInput').click()">Import backup</button>
+   <button class="btn btn-outline" onclick="resetSite()">Reset to original</button>
+  </div>
+  <input id="photoInput" type="file" accept="image/*" hidden onchange="uploadPortrait(event)">
+  <input id="workInput" type="file" accept="image/*" hidden onchange="uploadWorkImage(event)">
+  <input id="importInput" type="file" accept="application/json" hidden onchange="importData(event)">
+  <p class="small-note">Tip: click Edit website, then click any text on the page. You can also add images and new content cards from this panel.</p>
+  <div style="text-align:right;margin-top:16px"><button class="btn btn-green" onclick="closeTools()">Done</button></div>
+ </div>
+</div>
+
+<div id="commandPalette" role="dialog" aria-modal="true" aria-label="Quick navigation">
+ <div class="command-box">
+  <input id="commandSearch" type="search" placeholder="Search sections or actions…" aria-label="Search quick actions">
+  <div class="command-list" id="commandList">
+   <button type="button" data-go="#home">⌂ Home</button>
+   <button type="button" data-go="#about">About</button>
+   <button type="button" data-go="#journey">Journey</button>
+   <button type="button" data-go="#leadership">Leadership</button>
+   <button type="button" data-go="#works">Works and portfolio</button>
+   <button type="button" data-go="#projects">Projects</button>
+   <button type="button" data-go="#recognition">Recognition</button>
+   <button type="button" data-go="#contact">Contact</button>
+  </div>
+  <p style="font-size:11px;color:var(--muted);margin:12px 2px 0">Press Esc to close · Shortcut: Ctrl/⌘ + K</p>
+ </div>
+</div>
+<div class="utility-dock" aria-label="Extra website controls">
+ <button type="button" id="readingModeBtn" title="Reduce visual distractions">◉ Reading mode</button>
+ <button type="button" id="bookmarkBtn" title="Save this portfolio on this device">☆ Save page</button>
+ <button type="button" id="surpriseBtn" title="Jump to a featured section">✧ Surprise me</button>
+</div>
+<div id="toastNotice" role="status" aria-live="polite"></div>
+<script>
+const STORE='sydrix-portfolio-v1';
+let editing=false, currentWorkTarget=null;
+function toggleEdit(){
+ editing=!editing;document.body.classList.toggle('editing',editing);
+ document.querySelectorAll('.editable').forEach(el=>{el.contentEditable=editing?'true':'false';el.spellcheck=editing});
+ document.getElementById('editBtn').textContent=editing?'✓ Finish editing':'✎ Edit website';
+ document.getElementById('saveBtn').style.display=editing?'inline-block':'none';
+ if(!editing)saveSite();
+}
+function saveSite(){
+ const data={html:document.querySelector('main').innerHTML,hero:document.querySelector('.hero').innerHTML,footer:document.querySelector('footer').innerHTML,portrait:document.getElementById('portrait').innerHTML};
+ try{localStorage.setItem(STORE,JSON.stringify(data));alert('Your changes are saved in this browser. Export a backup from Tools to keep a separate copy.')}catch(e){alert('Browser storage is full. Try using smaller images, then export your content.')}
+}
+function loadSite(){
+ try{const d=JSON.parse(localStorage.getItem(STORE));if(!d)return;document.querySelector('main').innerHTML=d.html;document.querySelector('.hero').innerHTML=d.hero;document.querySelector('footer').innerHTML=d.footer;document.getElementById('portrait').innerHTML=d.portrait}catch(e){}
+}
+function openTools(){document.getElementById('toolsModal').classList.add('open')}
+function closeTools(){document.getElementById('toolsModal').classList.remove('open')}
+
+function pickPhoto(id){const input=document.getElementById('photo-'+id);if(input)input.click();}
+function uploadEntryPhoto(event,thumbId){
+ const file=event.target.files && event.target.files[0];if(!file)return;
+ const reader=new FileReader();
+ reader.onload=()=>{
+  const target=document.getElementById(thumbId);
+  if(target)target.innerHTML='<img alt="Uploaded documentation photo" src="'+reader.result+'">';
+  saveSite();
+ };
+ reader.readAsDataURL(file);event.target.value='';
+}
+
+function uploadPortrait(e){
+ const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{document.getElementById('portrait').innerHTML='<img alt="Uploaded portrait" src="'+r.result+'">';saveSite()};r.readAsDataURL(f);e.target.value='';
+}
+function uploadWorkImage(e){
+ const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const cards=[...document.querySelectorAll('#work-grid .work')];let target=cards[cards.length-1];if(!target){addCard('work-grid','work');target=document.querySelector('#work-grid .work:last-child')}target.querySelector('.work-image').innerHTML='<img alt="Portfolio image" src="'+r.result+'">';saveSite()};r.readAsDataURL(f);e.target.value='';
+}
+function addCard(container,type){
+ const host=document.getElementById(container);const n=host.children.length+1;
+ if(type==='work'){
+  const el=document.createElement('article');el.className='work';el.innerHTML='<div class="work-image">New work — add image</div><div class="work-body"><h3 class="editable" contenteditable="true">New portfolio item</h3><p class="editable" contenteditable="true">Describe your role, process, and output.</p><span class="tag editable" contenteditable="true">CATEGORY</span></div>';host.appendChild(el);
+ }else{
+  const el=document.createElement('article');el.className='card';el.innerHTML='<div class="card-num">ADDED / '+String(n).padStart(2,'0')+'</div><h3 class="editable" contenteditable="true">New '+(type==='project'?'project':type==='leadership'?'leadership experience':'item')+'</h3><p class="editable" contenteditable="true">Click here to add details.</p>';host.appendChild(el);
+ }
+ document.querySelectorAll('.editable').forEach(x=>{if(editing)x.contentEditable='true'});closeTools();if(!editing)toggleEdit();
+}
+function addTimeline(){
+ const host=document.getElementById('timeline');const el=document.createElement('article');el.className='timeline-item';el.innerHTML='<div class="timeline-year editable" contenteditable="true">YEAR</div><div><h3 class="editable" contenteditable="true">New milestone</h3><p class="editable" contenteditable="true">Describe this chapter of your journey.</p></div>';host.appendChild(el);closeTools();if(!editing)toggleEdit();
+}
+function exportData(){
+ const d={html:document.querySelector('main').innerHTML,hero:document.querySelector('.hero').innerHTML,footer:document.querySelector('footer').innerHTML,portrait:document.getElementById('portrait').innerHTML};
+ const blob=new Blob([JSON.stringify(d,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='sydrix-portfolio-backup.json';a.click();URL.revokeObjectURL(a.href);
+}
+function importData(e){
+ const f=e.target.files[0];if(!f)return;const reader=new FileReader();reader.onload=()=>{try{const d=JSON.parse(reader.result);if(d.html)document.querySelector('main').innerHTML=d.html;if(d.hero)document.querySelector('.hero').innerHTML=d.hero;if(d.footer)document.querySelector('footer').innerHTML=d.footer;if(d.portrait)document.getElementById('portrait').innerHTML=d.portrait;saveSite();alert('Backup imported.')}catch(err){alert('That backup file could not be read.')}};reader.readAsText(f);e.target.value='';
+}
+function resetSite(){if(confirm('Reset this website to its original content? This will remove saved browser edits.')){localStorage.removeItem(STORE);location.reload()}}
+loadSite();
+
+// Gentle reveal, reading progress, and back-to-top interactions.
+(function(){
+ const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const revealTargets = document.querySelectorAll('.section-head,.card,.work,.timeline-item,.recognition-group,.quote-panel,.prose,.contact-panel');
+ revealTargets.forEach(el=>el.classList.add('reveal'));
+ if(!reduce && 'IntersectionObserver' in window){
+   const observer = new IntersectionObserver(entries=>{
+     entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}});
+   },{threshold:.12});
+   revealTargets.forEach(el=>observer.observe(el));
+ }else{revealTargets.forEach(el=>el.classList.add('is-visible'))}
+ const progress=document.getElementById('scrollProgress');
+ const back=document.getElementById('backTop');
+ function updateScroll(){
+   const max=document.documentElement.scrollHeight-window.innerHeight;
+   const pct=max>0?(window.scrollY/max)*100:0;
+   progress.style.width=pct+'%';
+   back.classList.toggle('show',window.scrollY>500);
+ }
+ window.addEventListener('scroll',updateScroll,{passive:true});updateScroll();
+})();
+
+
+// Interactive Plus: theme, searchable portfolio, quick navigation and contact tools.
+(function(){
+ const email='sydrix.lorana@wvsu.edu.ph';
+ const toast=document.getElementById('toastNotice');
+ let toastTimer;
+ function notify(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2300)}
+ const themeBtn=document.getElementById('themeToggle');
+ const savedTheme=localStorage.getItem('sydrix-theme');
+ if(savedTheme==='dark')document.body.classList.add('dark-mode');
+ function syncTheme(){themeBtn.textContent=document.body.classList.contains('dark-mode')?'☀ Light':'◐ Theme'}
+ syncTheme();
+ themeBtn.addEventListener('click',()=>{document.body.classList.toggle('dark-mode');localStorage.setItem('sydrix-theme',document.body.classList.contains('dark-mode')?'dark':'light');syncTheme()});
+
+ // Search and filter the existing portfolio cards without changing their content.
+ const search=document.getElementById('portfolioSearch');
+ const filterWrap=document.getElementById('projectFilters');
+ const workGrid=document.getElementById('work-grid');
+ let activeFilter='all';
+ function filterWorks(){
+   if(!workGrid)return;
+   const q=(search?.value||'').trim().toLowerCase();
+   const cards=[...workGrid.children];
+   let shown=0;
+   cards.forEach(card=>{
+     const txt=card.innerText.toLowerCase();
+     const category=(card.querySelector('.tag')?.innerText||'').toLowerCase();
+     const categoryMatch=activeFilter==='all'||category.includes(activeFilter)||txt.includes(activeFilter);
+     const queryMatch=!q||txt.includes(q);
+     const visible=categoryMatch&&queryMatch;
+     card.hidden=!visible;if(visible)shown++;
+   });
+   const count=document.getElementById('portfolioCount');
+   if(count)count.textContent=`Showing ${shown} of ${cards.length} portfolio entr${cards.length===1?'y':'ies'}.`;
+ }
+ search?.addEventListener('input',filterWorks);
+ filterWrap?.addEventListener('click',e=>{
+   const btn=e.target.closest('[data-filter]');if(!btn)return;
+   activeFilter=btn.dataset.filter;
+   filterWrap.querySelectorAll('.filter-chip').forEach(b=>b.classList.toggle('active',b===btn));
+   filterWorks();
+ });
+ filterWorks();
+
+ // Quick navigation palette.
+ const palette=document.getElementById('commandPalette');
+ const openPalette=()=>{palette.classList.add('open');const input=document.getElementById('commandSearch');input.value='';input.focus();filterCommands()};
+ const closePalette=()=>palette.classList.remove('open');
+ document.getElementById('commandOpen')?.addEventListener('click',openPalette);
+ palette.addEventListener('click',e=>{if(e.target===palette)closePalette()});
+ document.getElementById('commandList').addEventListener('click',e=>{
+   const b=e.target.closest('[data-go]');if(!b)return;
+   closePalette();document.querySelector(b.dataset.go)?.scrollIntoView({behavior:'smooth'});
+ });
+ const commandSearch=document.getElementById('commandSearch');
+ function filterCommands(){const q=commandSearch.value.toLowerCase();document.querySelectorAll('#commandList button').forEach(b=>b.hidden=!b.textContent.toLowerCase().includes(q))}
+ commandSearch.addEventListener('input',filterCommands);
+ document.addEventListener('keydown',e=>{
+   if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openPalette()}
+   if(e.key==='Escape')closePalette();
+ });
+
+ // Contact form creates a draft in the visitor's email app; nothing is submitted to a server.
+ document.getElementById('contactForm')?.addEventListener('submit',e=>{
+   e.preventDefault();
+   const name=document.getElementById('contactName').value.trim();
+   const subject=document.getElementById('contactSubject').value.trim();
+   const message=document.getElementById('contactMessage').value.trim();
+   const body=`Hello Sydrix,\n\n${message}\n\nRegards,\n${name}`;
+   location.href=`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+ });
+ document.getElementById('copyEmail')?.addEventListener('click',async()=>{
+   try{await navigator.clipboard.writeText(email);notify('Email address copied.')}
+   catch(e){notify(email)}
+ });
+ document.getElementById('sharePortfolio')?.addEventListener('click',async()=>{
+   const shareData={title:document.title,text:'Explore the personal portfolio of Sydrix L. Loraña.',url:location.href};
+   try{if(navigator.share)await navigator.share(shareData);else{await navigator.clipboard.writeText(location.href);notify('Portfolio link copied.')}}catch(e){}
+ });
+ document.getElementById('downloadVcard')?.addEventListener('click',()=>{
+   const vcard='BEGIN:VCARD\nVERSION:3.0\nFN:Sydrix L. Loraña\nEMAIL:'+email+'\nURL:'+location.href+'\nEND:VCARD';
+   const blob=new Blob([vcard],{type:'text/vcard'});const url=URL.createObjectURL(blob);
+   const a=document.createElement('a');a.href=url;a.download='Sydrix-Lorana.vcf';a.click();URL.revokeObjectURL(url);
+ });
+})();
+
+
+// Chapter expansion, photo lightbox, gallery, and section jump actions.
+(function(){
+ const sections=[['about','DISCOVER MY STORY'],['journey','EXPLORE MY JOURNEY'],['leadership','EXPLORE MY LEADERSHIP'],['works','EXPLORE EXPERIENCES'],['projects','OPEN CREATIVE WORKS'],['recognition','VIEW ACHIEVEMENTS'],['vision','DISCOVER MY VISION'],['contact','GET IN TOUCH']];
+ sections.forEach(([id,label])=>{
+   const section=document.getElementById(id),head=section?.querySelector('.section-head');
+   if(head&&!head.querySelector('.section-cta')){
+     const a=document.createElement('a');a.className='section-cta';a.href='#'+id;a.textContent=label+' ↗';
+     head.appendChild(a);
+   }
+ });
+ const overlay=document.createElement('div');overlay.className='journey-overlay';overlay.id='journeyOverlay';
+ overlay.innerHTML='<div class="journey-dialog" role="dialog" aria-modal="true" aria-label="Explore portfolio detail"><button class="journey-close" type="button" aria-label="Close">×</button><div class="journey-dialog-inner"></div></div>';
+ document.body.appendChild(overlay);
+ const inner=overlay.querySelector('.journey-dialog-inner');
+ function close(){overlay.classList.remove('open');inner.innerHTML='';document.body.style.overflow=''}
+ function show(title,meta,description,image,extra){
+   inner.innerHTML='';
+   if(image){const img=document.createElement('img');img.className='journey-hero-image';img.src=image;img.alt=title;inner.appendChild(img)}
+   const kicker=document.createElement('div');kicker.className='kicker';kicker.textContent=meta||'A MOMENT IN THE JOURNEY';inner.appendChild(kicker);
+   const h=document.createElement('h3');h.textContent=title;inner.appendChild(h);
+   const p=document.createElement('p');p.textContent=description||'A meaningful part of this ongoing journey.';inner.appendChild(p);
+   if(extra){const detail=document.createElement('div');detail.className='journey-detail';detail.innerHTML=extra;inner.appendChild(detail)}
+   const actions=document.createElement('div');actions.className='feature-actions';
+   const back=document.createElement('button');back.className='feature-action secondary';back.textContent='← BACK TO TIMELINE';back.onclick=close;actions.appendChild(back);
+   inner.appendChild(actions);overlay.classList.add('open');document.body.style.overflow='hidden';
+ }
+ overlay.querySelector('.journey-close').addEventListener('click',close);
+ overlay.addEventListener('click',e=>{if(e.target===overlay)close()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+ const timeline=document.getElementById('timeline');
+ timeline?.querySelectorAll('.timeline-item').forEach((card,i)=>{
+   card.setAttribute('role','button');card.setAttribute('tabindex','0');
+   card.setAttribute('aria-label','Explore '+(card.querySelector('h3')?.textContent||'journey chapter'));
+   const open=()=>{
+     const title=card.querySelector('h3')?.innerText||'Journey chapter';
+     const meta=card.querySelector('.entry-meta')?.innerText||'';
+     const desc=[...card.querySelectorAll('p')].map(x=>x.innerText).join(' · ');
+     const img=card.querySelector('.thumb img')?.src||'';
+     const extra='<strong>Explore this chapter</strong><p>Year, school, experiences, memories, and milestones are shown here as you add details in Edit mode.</p>';
+     show(title,meta,desc,img,extra);
+   };
+   card.addEventListener('click',e=>{if(e.target.closest('button,input,a'))return;open()});
+   card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+ });
+ // Make every uploaded photo open in a large, focused view with its context.
+ document.addEventListener('click',e=>{
+   const img=e.target.closest('.photo-slot .thumb img');
+   if(img){
+     e.preventDefault();e.stopPropagation();
+     const slot=img.closest('.photo-slot'),card=img.closest('article,.recognition-group');
+     const title=card?.querySelector('h3')?.innerText||slot.querySelector('strong')?.innerText||'Portfolio photograph';
+     const meta=card?.querySelector('.entry-meta,.kicker')?.innerText||'PHOTO GALLERY';
+     const desc=card?.querySelector('p')?.innerText||slot.querySelector('.photo-copy span')?.innerText||'A captured moment from the portfolio.';
+     show(title,meta,desc,img.src,'<strong>Photo note</strong><p>Click the close or back button to return to the page.</p>');
+   }
+ });
+ // Add a visual gallery made from the images visitors have uploaded.
+ const gallery=document.createElement('section');gallery.className='section';gallery.id='gallery';
+ gallery.innerHTML='<div class="section-head"><div><div class="kicker">A VISUAL ARCHIVE</div><h2>Moments, collected.</h2></div><p class="section-intro">A picture-led gallery. Select any photograph to view it larger with its story.</p><a class="section-cta" href="#gallery">OPEN GALLERY ↗</a></div><div class="gallery-grid" id="photoGallery"></div>';
+ const contact=document.getElementById('contact');contact?.parentNode.insertBefore(gallery,contact);
+ function refreshGallery(){
+   const grid=document.getElementById('photoGallery');if(!grid)return;grid.innerHTML='';
+   document.querySelectorAll('.photo-slot .thumb img,.portrait img').forEach((img,i)=>{
+     const tile=document.createElement('button');tile.type='button';tile.className='gallery-tile';
+     const copy=document.createElement('img');copy.src=img.src;copy.alt=img.alt||'Portfolio photograph';tile.appendChild(copy);
+     const cap=document.createElement('span');cap.textContent=img.closest('.photo-slot')?.querySelector('strong')?.innerText|| (i===0?'Portrait':'Memory '+i);tile.appendChild(cap);
+     tile.addEventListener('click',()=>{const slot=img.closest('.photo-slot'),card=img.closest('article,.recognition-group');show(card?.querySelector('h3')?.innerText||cap.textContent,card?.querySelector('.entry-meta,.kicker')?.innerText||'PHOTO GALLERY',card?.querySelector('p')?.innerText||'A moment from the portfolio.',img.src,'<strong>Photo exploration</strong><p>Return to the gallery whenever you are ready.</p>')});
+     grid.appendChild(tile);
+   });
+   if(!grid.children.length)grid.innerHTML='<p class="small-note">Uploaded photographs will appear here. Use Edit website and the photo controls to add memories.</p>';
+ }
+ refreshGallery();
+ const originalUpload=window.uploadEntryPhoto;
+ window.uploadEntryPhoto=function(...args){originalUpload.apply(this,args);setTimeout(refreshGallery,250)};
+ const originalPortrait=window.uploadPortrait;
+ window.uploadPortrait=function(...args){originalPortrait.apply(this,args);setTimeout(refreshGallery,250)};
+ // Keep gallery refreshed after restoring saved content.
+ window.addEventListener('load',refreshGallery);
+})();
+
+</script>
+
+<script>
+/* Universal content explorer: content cards and information panels open in a focused detail view. */
+(function(){
+ const overlay=document.createElement('div');
+ overlay.className='detail-overlay';overlay.id='contentDetailOverlay';
+ overlay.innerHTML='<div class="detail-card" role="dialog" aria-modal="true" aria-label="Portfolio detail"><button class="detail-close" type="button" aria-label="Close detail">×</button><div class="detail-content"></div></div>';
+ document.body.appendChild(overlay);
+ const content=overlay.querySelector('.detail-content');
+ function close(){overlay.classList.remove('open');content.innerHTML='';document.body.style.overflow=''}
+ overlay.querySelector('.detail-close').addEventListener('click',close);
+ overlay.addEventListener('click',e=>{if(e.target===overlay)close()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+ function openCard(card){
+   if(document.body.classList.contains('editing') || card.closest('#journey'))return;
+   const title=card.querySelector('h3')?.innerText||card.querySelector('blockquote')?.innerText||card.querySelector('strong')?.innerText||'Explore this part of the portfolio';
+   const meta=card.querySelector('.entry-meta,.card-num,.kicker,.tag')?.innerText||'A PORTFOLIO DETAIL';
+   const image=card.querySelector('.thumb img,.work-image img')?.src||'';
+   const paragraphs=[...card.querySelectorAll(':scope > p, .work-body > p, .prose p, blockquote')].map(p=>p.innerText.trim()).filter(Boolean);
+   const list=card.querySelector('ul');
+   if(image){const img=document.createElement('img');img.src=image;img.alt=title;content.appendChild(img)}
+   const m=document.createElement('div');m.className='detail-meta';m.textContent=meta;content.appendChild(m);
+   const h=document.createElement('h3');h.textContent=title;content.appendChild(h);
+   paragraphs.forEach(txt=>{const p=document.createElement('p');p.textContent=txt;content.appendChild(p)});
+   if(list){const ul=document.createElement('ul');[...list.children].forEach(li=>{const item=document.createElement('li');item.textContent=li.innerText;ul.appendChild(item)});content.appendChild(ul)}
+   if(!paragraphs.length&&!list){const p=document.createElement('p');p.textContent='Explore this part of the portfolio on the page. Use Edit website to personalize its content.';content.appendChild(p)}
+   const hint=document.createElement('p');hint.className='small-note';hint.textContent='Select × or tap outside this panel to return to the portfolio.';content.appendChild(hint);
+   overlay.classList.add('open');document.body.style.overflow='hidden';
+ }
+ document.querySelectorAll('.card,.work,.recognition-group,.prose,.quote-panel').forEach(card=>{
+   card.setAttribute('tabindex','0');card.setAttribute('role','button');
+   card.setAttribute('aria-label','Open details: '+(card.querySelector('h3')?.innerText||'portfolio content'));
+   card.addEventListener('click',e=>{
+     if(e.target.closest('button,a,input,textarea,.photo-slot,.editable[contenteditable="true"]'))return;
+     openCard(card);
+   });
+   card.addEventListener('keydown',e=>{
+     if(e.target!==card)return;
+     if(e.key==='Enter'||e.key===' '){e.preventDefault();openCard(card)}
+   });
+ });
+ // Controls that add practical browsing options without changing any portfolio content.
+ const reading=document.getElementById('readingModeBtn');
+ reading?.addEventListener('click',()=>{
+   document.body.classList.toggle('reading-mode');
+   reading.textContent=document.body.classList.contains('reading-mode')?'◎ Exit reading mode':'◉ Reading mode';
+ });
+ const bookmark=document.getElementById('bookmarkBtn');
+ function syncBookmark(){const saved=localStorage.getItem('sydrix-page-bookmarked')==='yes';bookmark.textContent=saved?'★ Page saved':'☆ Save page'}
+ syncBookmark();
+ bookmark?.addEventListener('click',()=>{
+   const saved=localStorage.getItem('sydrix-page-bookmarked')==='yes';
+   localStorage.setItem('sydrix-page-bookmarked',saved?'no':'yes');syncBookmark();
+   const toast=document.getElementById('toastNotice');if(toast){toast.textContent=saved?'Removed saved-page marker':'Portfolio marked as saved on this device';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)}
+ });
+ document.getElementById('surpriseBtn')?.addEventListener('click',()=>{
+   const ids=['about','journey','leadership','works','projects','recognition','vision','gallery','contact'];
+   const choices=ids.map(id=>document.getElementById(id)).filter(Boolean);
+   const target=choices[Math.floor(Math.random()*choices.length)];
+   target.scrollIntoView({behavior:'smooth',block:'start'});
+ });
+ // "/" focuses portfolio search; useful on desktop and mobile with a keyboard.
+ document.addEventListener('keydown',e=>{
+   if(e.key==='/'&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)&&!e.ctrlKey&&!e.metaKey){
+     const search=document.getElementById('portfolioSearch');if(search){e.preventDefault();search.focus()}
+   }
+ });
+})();
+</script>
+
+</body></html>
